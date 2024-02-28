@@ -27,3 +27,14 @@ for value in Lista:
 #no pueden ser alteradas
 tupla=(1,'Valor',3,False,4.6)
 print(tupla[0])
+
+#Conjuntos Son contenedores que permiten almacenar objetos de diferentes tipos de datos, sin embargo solo permite tener
+# valores únicos
+conjuntos= {1,2,3,4}              
+
+#Dada la lista_con_dup= [1,1,2,2,3,4,5,6,6,6] construir una lista con los valores sin duplicados, use list y set
+
+lista_con_dup= [1,1,2,2,3,4,5,6,6,6]
+lista= list(set(lista_con_dup)) 
+print(lista)
+
