@@ -1,3 +1,6 @@
+import numpy as np
+import math
+
 #El lado izquierdo de la variable se conoce como identificador, el simbolo en la mitad (=)
 #se conoce como simbolo de asignacion y me asigna al espacio de memoria identificado con 
 # el nombre de la variable el valor que  tiene a su derecha.
@@ -38,3 +41,72 @@ lista_con_dup= [1,1,2,2,3,4,5,6,6,6]
 lista= list(set(lista_con_dup)) 
 print(lista)
 
+#Diccionarios  :Son contenedores que permite almacenar pares de llave-valor
+diccionario={"Nombre":"karol","Edad":23,"Estatura":1.57}
+
+for key,value in diccionario.items():
+    print (f"{key}:{value}")
+
+
+#Sentencias de control de flujo 
+if edad>=18:
+    print("Eres mayor de edad")
+elif edad<18 and edad>0:
+    print ("Eres menor de edad")
+else:
+    print("La edad debe ser positiva")
+
+#Funciones
+
+def suma(num_1: float,num_2: float) ->float:
+    """Suma dos numeros flotantes
+    
+    Args:
+        num_1 (float): Primer numero
+        num_2 (float): Segundo numero
+    Returns:
+        float: Resultado de la suma de los numeros anteriores
+    """
+    return num_1+num_2
+
+print(suma(5.5,3.3))
+
+#Ejercicio: Escribir una funcion que muestre por pantalla 'Hola Mundo'
+
+def hola_mundo() -> None:
+    print('Hola Mundo')
+
+#Ejercicio Escribir una funcion que reciba el nombre de una personas y muestre  un mensaje con su nombre completo
+
+def saludo(nombre:str) -> None:
+    saludo=f"Hola {nombre}"
+    print(saludo)
+saludo('Karol')
+
+#Ejercicio: Escribir una funcion que reciba un numero entero y devuelva su factorial, esta funcion si tiene retorno
+
+def factorial(numero:int)-> int :
+    """Esta funcion calcula  el factorial de un numero entero
+
+    Args:
+        numero (int): _Numero para tener factorial
+
+    Returns:
+        int: Valor del factorial
+    """
+    numero_factorial= math.factorial(numero)
+    return numero_factorial
+
+#Ejercicio: Escribir una funcion que reciba una lista y retorne su media
+
+def media(lista_numeros:list)->float:
+    """Calcula la media de una lista de numeros
+    
+    Args:
+        lista_numeros (list): Lista con numeros enteros o decimales
+        
+    Returns:
+        float: Media de la lista de numeros
+    """
+    return np.mean(lista_numeros)
+print(media([1,2,3,4,5]))
